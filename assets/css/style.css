@@ -1,0 +1,279 @@
+/* colors: */
+body {
+    --instu-1: #707aff;
+    --instu-2: #e5b8b3;
+    --instu-3: #e3e05f;
+    --instu-4: #00ff83;
+    --cool-red: #ff4f33;
+    --border-color: #909090;
+    font-family: 'Courier New', Courier, monospace;
+    color: var(--border-color);
+}
+
+.button {
+    border-color: var(--border-color);
+    border-radius: 50px;
+    position: relative;
+}
+
+.slider.horizontal {
+    border: none;
+    height: 40px;
+}
+
+.slider.vertical {
+    border: none;
+    width: 40px;
+}
+
+.slider.horizontal .progressbar {
+    background-color: var(--border-color);
+    top: 50%;
+    height: 1px;
+}
+
+.progress {
+    height: 100%;
+    position: absolute;
+}
+
+.slider.vertical .progressbar {
+    background-color: var(--border-color);
+    left: 50%;
+    width: 1px;
+}
+
+/* MOCHE */
+
+#moche #container[value="0"] #buttons-container .slider .progress,
+#moche #button1>.on,
+#moche #container[value="0"] #buttons-container .slider>.cursor {
+    background-color: var(--instu-1);
+}
+
+#moche #container[value="1"] #buttons-container .slider .progress,
+#moche #button2>.on,
+#moche #container[value="1"] #buttons-container .slider>.cursor {
+    background-color: var(--instu-2);
+}
+
+#moche #container[value="2"] #buttons-container .slider .progress,
+#moche #button3>.on,
+#moche #container[value="2"] #buttons-container .slider>.cursor {
+    background-color: var(--instu-3);
+}
+
+#moche #container[value="3"] #buttons-container .slider .progress,
+#moche #button4>.on,
+#moche #container[value="3"] #buttons-container .slider>.cursor {
+    background-color: var(--instu-4);
+}
+
+#moche .slider {
+    overflow: visible;
+}
+
+#moche #buttons-container {
+    bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    height: 260px;
+    justify-content: space-between;
+    position: absolute;
+    right: 20px;
+    width: 200px;
+}
+
+#moche #selector {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+#moche .slider.horizontal {
+    position: relative;
+    width: 100%;
+}
+
+#moche #bpms,
+#moche #startstop {
+    margin: 0;
+    padding: 0;
+}
+
+#moche #bpms {
+    width: 200px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+#moche #tictac {
+    position: relative;
+    top: 10px;
+}
+
+#moche #startstop {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    width: 20%;
+}
+
+#moche #bpms p {
+    font-size: 50px;
+    font-weight: bolder;
+    height: 80px;
+    margin: 0;
+    position: relative;
+    top: -6px;
+    transform: rotate(90deg);
+    width: 45px;
+}
+
+#moche #sliderbpm {
+    bottom: 20px;
+    height: 240px;
+    left: 20px;
+}
+
+#moche #sliderbpm>.cursor {
+    background-color: var(--cool-red);
+    border: 2px solid white;
+}
+
+#moche #sliderbpm .progress {
+    background-color: white;
+}
+
+/* IPHONE */
+
+#iphone #infos {
+    padding: 20px;
+    position: absolute;
+    border: 1px solid var(--border-color);
+    transform: rotate(90deg);
+    height: 20vw;
+    left: 50px;
+    top: 96px;
+    width: 200px;
+    color: var(--border-color);
+}
+
+#iphone #sequencer-container {
+    bottom: 80px;
+    display: grid;
+    grid-template: "a b c d";
+    justify-content: center;
+    position: absolute;
+    right: 40px;
+}
+
+#iphone #sequencer-container .button {
+    border-radius: 0px;
+    border: none;
+    padding: 2px;
+}
+
+#iphone #sequencer-container .button.current .sub-button {
+    background-blend-mode: normal;
+}
+
+#iphone #sequencer-container .button.row-0,
+#iphone #sequencer-container .button.row-1,
+#iphone #sequencer-container .button.row-2 {
+    border-bottom: 1px solid var(--border-color)
+}
+
+#iphone #sequencer-container .button.col-0,
+#iphone #sequencer-container .button.col-1,
+#iphone #sequencer-container .button.col-2 {
+    border-right: 1px solid var(--border-color)
+}
+
+#iphone #sequencer-container .button .on {
+    background-color: none;
+    opacity: 0;
+}
+
+#iphone .sub-button {
+    border-radius: 20px;
+    border: 2px solid;
+    height: 13px;
+    opacity: 0;
+    position: absolute;
+    width: 13px;
+    z-index: -2;
+}
+
+
+#iphone .button.current .sub-button.instrument-0 {
+    background-color: var(--instu-1);
+}
+
+#iphone .button.current .sub-button.instrument-1 {
+    background-color: var(--instu-2);
+}
+
+#iphone .button.current .sub-button.instrument-2 {
+    background-color: var(--instu-3);
+}
+
+#iphone .button.current .sub-button.instrument-3 {
+    background-color: var(--instu-4);
+}
+
+#iphone .sub-button.instrument-0 {
+    border-color: var(--instu-1);
+    right: 5px;
+    top: 5px;
+}
+
+#iphone .sub-button.instrument-1 {
+    border-color: var(--instu-2);
+    bottom: 5px;
+    right: 5px;
+}
+
+#iphone .sub-button.instrument-2 {
+    border-color: var(--instu-3);
+    left: 5px;
+    top: 5px;
+}
+
+#iphone .sub-button.instrument-3 {
+    border-color: var(--instu-4);
+    bottom: 5px;
+    left: 5px;
+}
+
+#iphone .sub-button.activated {
+    opacity: 1;
+}
+
+/* Gigaset  */
+
+#chordselector {
+    -webkit-column-count: 3;
+    -moz-column-count: 3;
+    column-count: 3;
+    width: 50%;
+}
+
+#chordselector .button{
+    text-align: center;
+    font-weight: bold;
+    font-size: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    z-index: 10;
+}
+
+#harp {
+    top: 0px;
+    left: 50%;
+    width: 50%;
+    height: 100%;
+}
